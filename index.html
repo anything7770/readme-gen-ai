@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI README Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI README Generator</h1>
+        <p>Instantly generate README.md files for your GitHub projects using AI.</p>
+
+        <form id="readmeForm">
+            <label for="apiKey">OpenAI API Key:</label>
+            <input type="password" id="apiKey" name="apiKey" placeholder="Enter your OpenAI API Key" required />
+
+            <label for="title">Project Title:</label>
+            <input type="text" id="title" name="title" placeholder="Project Title" required />
+
+            <label for="description">Project Description:</label>
+            <textarea id="description" name="description" placeholder="Project Description"></textarea>
+
+            <label for="features">Key Features (comma-separated):</label>
+            <textarea id="features" name="features" placeholder="e.g., Feature 1, Another Feature, Cool Feature 3"></textarea>
+
+            <label for="installation">Installation Steps:</label>
+            <textarea id="installation" name="installation" placeholder="1. Step one...
+2. Step two..."></textarea>
+
+            <label for="usage">Usage Example:</label>
+            <textarea id="usage" name="usage" placeholder="Provide a code example or instructions on how to use the project."></textarea>
+
+            <label for="tech">Tech Stack (comma-separated):</label>
+            <textarea id="tech" name="tech" placeholder="e.g., JavaScript, Python, React, Docker"></textarea>
+
+            <label for="license">License:</label>
+            <select id="license" name="license">
+                <option value="MIT">MIT</option>
+                <option value="Apache-2.0">Apache 2.0</option>
+                <option value="GPL-3.0">GPL 3.0</option>
+                <option value="ISC">ISC</option>
+                <option value="Unlicense">Unlicense</option>
+                <option value="Other">Other (Specify in README)</option>
+            </select>
+
+            <button type="submit">Generate README</button>
+        </form>
+
+        <h2>Generated README:</h2>
+        <pre id="output">Your README content will appear here...</pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
